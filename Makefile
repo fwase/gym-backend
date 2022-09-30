@@ -11,3 +11,7 @@ lint: format
 .PHONY: tests
 tests:
 	poetry run python -m pytest --cache-clear ./tests/*
+
+.PHONY: package
+package:
+	poetry install
