@@ -19,13 +19,13 @@ class Person:
         password: str,
     ) -> None:
         if weight < 0.0:
-            raise ValueError("weight should be non-negative real")
+            raise ValueError("Weight should be non-negative real")
 
         if height < 0:
-            raise ValueError("height should be non-negative integer")
+            raise ValueError("Height should be non-negative integer")
 
         if len(phones) < 1:
-            raise ValueError("must be exists more than one phone")
+            raise ValueError("Must be exists more than one phone")
 
         self.name = name
         self.weight = weight
