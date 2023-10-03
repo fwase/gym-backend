@@ -15,3 +15,8 @@ tests:
 .PHONY: packages
 packages:
 	poetry install
+
+
+.PHONY: run
+run:
+	poetry run uvicorn src_new.app:main_app --port=8000 --reload
