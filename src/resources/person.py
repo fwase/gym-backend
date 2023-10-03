@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
-from src.api.schemas.person import PostPersonSchema, GetPersonSchema
+
+from src.api.schemas.person import GetPersonSchema, PostPersonSchema
+
 
 class PersonResource(ABC):
     @abstractmethod

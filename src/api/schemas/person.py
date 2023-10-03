@@ -1,6 +1,8 @@
 from datetime import datetime
-from pydantic import BaseModel
 from typing import List
+
+from pydantic import BaseModel
+
 
 class PostPersonSchema(BaseModel):
     name: str
@@ -16,6 +18,7 @@ class PostPersonSchema(BaseModel):
     update_at: datetime
     payment_validity: datetime
     password: str
+
 
 class GetPersonSchema(BaseModel):
     name: str
