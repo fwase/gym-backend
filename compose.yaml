@@ -1,0 +1,13 @@
+services:
+  gym-backend:
+    image: gym-backend
+    build: .
+    ports:
+      - "8000:8000"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "gym-backend-password-test"
+    ports:
+      - "5432:5432"
