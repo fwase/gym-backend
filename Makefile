@@ -16,7 +16,10 @@ tests:
 packages:
 	poetry install
 
+.PHONY: extract-deps
+extract-deps:
+	poetry run pip freeze -> requeriments.txt
 
 .PHONY: run
 run:
-	poetry run uvicorn src_new.app:main_app --port=8000 --reload
+	poetry run uvicorn src.app:main_app --port=8000 --reload
