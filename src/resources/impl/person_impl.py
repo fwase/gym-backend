@@ -1,4 +1,4 @@
-from src_new.api.schemas.person import GetPersonSchema, PostPersonSchema
+from src.api.schemas.person import GetPersonSchema, PostPersonSchema
 
 from src.resources.person import PersonResource
 
