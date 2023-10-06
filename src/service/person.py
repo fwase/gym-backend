@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from src.api.schemas.person import GetPersonSchema, PostPersonSchema
 
 
-class PersonResource(ABC):
+class PersonService(ABC):
     @abstractmethod
     def get_person(cpf: str) -> GetPersonSchema:
         raise NotImplementedError

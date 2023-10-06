@@ -1,8 +1,8 @@
 from fastapi import APIRouter, status, HTTPException
 
-from src.resources.impl.person_impl import PersonResourceImpl as person_resource
+from src.service.impl.person_impl import PersonServiceImpl as person_service
 
-from ..schemas.person import GetPersonSchema, PostPersonSchema
+from src.api.schemas.person import GetPersonSchema, PostPersonSchema
 
 import re
 
@@ -15,7 +15,7 @@ def get_person(cpf: str) -> GetPersonSchema:
     if not cpf_match:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST)
 
-    return person_resource.get_person(cpf)
+    return person_service.get_person(cpf)
 
 
 @router.post("/persons", status_code=status.HTTP_201_CREATED)
