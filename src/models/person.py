@@ -13,8 +13,8 @@ class Person:
         cep: str,
         phones: list[str],
         email_address: str,
-        create_at: datetime,
-        update_at: datetime,
+        created_at: datetime,
+        updated_at: datetime,
         payment_validity: datetime,
         password: str,
     ) -> None:
@@ -36,7 +36,7 @@ class Person:
         self.cep = cep
         self.phones = phones
         self.email_address = email_address
-        self.create_at = create_at
-        self.update_at = update_at
+        self.create_at = created_at
+        self.update_at = updated_at
         self.payment_validity = payment_validity
         self.password = password
